@@ -1,0 +1,32 @@
+# Activity 2.2.2: An introduction to Python.
+# File:     Hw2_Programming_Prob1_hobbyc.py
+# Date:     5 September 2022
+# By:       Cole Hobby
+#           hobbyc
+# Section:  3
+# Team:     61
+#
+# ELECTRONIC SIGNATURE
+# Cole Hobby
+#
+# The electronic signature above indicates that the program
+# submitted for evaluation is my individual work. I have
+# a general understanding of all aspects of its development
+# and execution.
+#
+# This program will take the dimensions of a sheet of glass and ouput the 
+# amount of time, in hours, that it will take to create the sheet of glass
+
+height = float(input ('Please input height of the sheet of glass in centimeters: '))
+length = float(input ('Please input length of the sheet of glass in centimeters: '))
+thickness = float(input ('Please input thickness of the sheet of glass in centimeters: '))
+import math
+if (thickness > 2):
+    time = thickness * math.sqrt(height * length)
+    time = time / 2.5
+elif (height * length < 100):
+    time = 8.0
+else:
+    time = math.sqrt(height * length)
+    time = time / 1.25
+print ("Estimated time of fabrication: " + str(time) + " hours")
